@@ -128,7 +128,15 @@ def buscar_por_nombre(nombre: str, db: Session = Depends(get_db)):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
 
-
+@app.get("/buscar_por_habitat/{habitat_id}", response_model=list[schemas.Animal])
+def buscar_por_habitat(habitat_id: int, db: Session = Depends(get_db)):
+    try:
+        animales = db.query(models.Animal).filter(models.Animal.idhabitat == habitat_id).all()
+        if not animales:
+            raise HTTPException(status_code=404, detail="No se encontraron animales en ese hábitat")
+        return animales
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
 
 
 
