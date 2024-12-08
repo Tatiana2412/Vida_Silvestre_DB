@@ -138,5 +138,24 @@ def buscar_por_habitat(habitat_id: int, db: Session = Depends(get_db)):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
 
+@app.get("/buscar_por_cuidador/{cuidador_id}", response_model=list[schemas.Animal])
+def buscar_por_cuidador(cuidador_id: int, db: Session = Depends(get_db)):
+    try:
+        animales = db.query(models.Animal).filter(models.Animal.idcuidador == cuidador_id).all()
+        if not animales:
+            raise HTTPException(status_code=404, detail="No se encontraron animales bajo ese cuidador")
+        return animales
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
+
+@app.get("/buscar_por_fecha/{fecha_nacimiento}", response_model=list[schemas.Animal])
+def buscar_por_fecha(fecha_nacimiento: str, db: Session = Depends(get_db)):
+    try:
+        animales = db.query(models.Animal).filter(models.Animal.fechanac == fecha_nacimiento).all()
+        if not animales:
+            raise HTTPException(status_code=404, detail="No se encontraron animales con esa fecha de nacimiento")
+        return animales
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
 
 
