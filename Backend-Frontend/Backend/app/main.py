@@ -117,6 +117,18 @@ def listar_todos(db: Session = Depends(get_db)):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
+    
+@app.get("/buscar_por_nombre/{nombre}", response_model=list[schemas.Animal])
+def buscar_por_nombre(nombre: str, db: Session = Depends(get_db)):
+    try:
+        animales = db.query(models.Animal).filter(models.Animal.nombre.ilike(f"%{nombre}%")).all()
+        if not animales:
+            raise HTTPException(status_code=404, detail="No se encontraron animales con ese nombre")
+        return animales
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
+
+
 
 
 
