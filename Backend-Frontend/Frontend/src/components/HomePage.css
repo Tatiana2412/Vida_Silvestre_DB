@@ -1,0 +1,42 @@
+
+.home-title {
+    font-size: 3rem; /* Título grande */
+    margin-bottom: 30px;
+    color: #2c3e50; /* Color de texto */
+    text-align: center;
+}
+
+.button-container {
+    display: flex; /* Alineación horizontal */
+    flex-wrap: wrap; /* Asegura que los botones se muevan a la siguiente línea si es necesario */
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 20px; /* Espaciado uniforme entre los botones */
+    margin: 2rem;
+}
+
+.action-button {
+    display: inline-block;
+    margin: 10px 10px; /* Ajusta el margen horizontal entre botones */
+    padding: 15px 30px;
+    font-size: 1.5rem; /* Botones grandes */
+    color: #000000;
+    background-color: #ffffff; /* Color de fondo de los botones */
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+    width: 190px; /* Ancho fijo */
+    height: 320px; /* Alto fijo */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-button:hover {
+    background-color: #2980b9; /* Color de fondo al pasar el mouse */
+    transform: translateY(-2px); /* Eleva el botón */
+}
+.action-button:active {
+    transform: translateY(2px); /* Baja el botón al hacer clic */
+}
