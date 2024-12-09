@@ -10,4 +10,4 @@ DATABASE_URL = "postgresql+psycopg2://postgres:Kush534@localhost:5432/zoo"
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-Base = declarative_base()   
+Base = declarative_base()       
