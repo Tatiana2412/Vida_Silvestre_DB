@@ -40,29 +40,15 @@ un animal pertenece a una especie y a una especie pertenecen muchos animales
 
 ## Tabla: cuidador 👮🏼
 
-**Campo**	        **Tipo**	**Descripcion**
-id	                serial	    Identificador unico del cuidador
-nombre	            varchar	    Nombre del cuiador
-fechacontratacion	date	    Fecha de contratcion del cuiador
-idespecialidad	    serial	    Identificador unico de la especialidad del cuiador
-salario	            numeric	    Salario del cuidador
+lll
 
 ## Tabla habitat 🌳
 
-**Campo**	    **Tipo**	**Descripcion**
-id	            serial	    Identificador unico del habitat
-nombre	        varchar	    Nombre del habitat
-idubicacion	    serial	    Identificador unico de la ubicacion del habitat
-idclima	        serial	    Identificador unico del tipo de clima del habitat
-costobase	    numeric	    Costo base para visitar el habitat
+ll
 
 ## Tabla especie 🦊
 
-**Campo**	            **Tipo**	**Descripcion** 
-id	                    serial	    Identificador unico de la especie
-nombre	                varchar	    Nombre de la especie
-idfamilia	            serial	    Identificador unico de la familia de la especie
-idestadoconservacion	serial	    Identificador unico del estado de conservacion
+lll
 
 ## Instrucciones para manejar el sistema 📚
 
