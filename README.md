@@ -23,13 +23,8 @@ Bienvenido a **Nuestro Proyecto**! Este repositorio alberga un sistema web diseÃ
 
 La base de datos incluye una tabla principal llamada **animales,** con los siguientes campos:
 ## Tabla: animales ðŸ¦Š
-**Campo**	 **Tipo**     **Descripcion** 
-id	         serial	      Identificador unico del animal
-nombre	     varchar	  Nombre del animal
-Fechanac	 date	      Fecha de nacimiento del animal
-idcuidador	 serial	      Identificador unico del cuiador acargo del animal
-idhabitat	 serial	      Identificador unico del habitat del animal
-idespecie	 serial	      Identificador unico de la especie del animal
+
+![alt text](image.png)
 
 ## Relaciones
 
