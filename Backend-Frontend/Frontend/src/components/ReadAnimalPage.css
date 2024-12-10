@@ -1,0 +1,99 @@
+.read-container {
+    width: 50%;
+    min-height: calc(100vh - 60px);
+    margin: auto;
+    padding: 30px;
+    background-color: #e6f7ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.read-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #2b3d4f;
+    font-family: 'Georgia', serif;
+}
+
+.read-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form-group label {
+    width: 50%;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #34495e;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"] {
+    flex-grow: 2;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
+
+.form-group input[type="text"]:disabled,
+.form-group input[type="date"]:disabled {
+    background-color: #e6e6e6;
+    cursor: not-allowed;
+}
+
+.form-group input[type="checkbox"] {
+    width: 10%;
+    cursor: pointer;
+}
+
+.read-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.read-search-button,
+.read-back-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 48%; /* Ajuste el ancho para coincidir con los botones de Delete */
+    text-align: center;
+}
+
+.read-search-button {
+    background-color: #3498db;
+    color: white;
+}
+
+.read-search-button:hover {
+    background-color: #2980b9;
+}
+
+.read-back-button {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.read-back-button:hover {
+    background-color: #c0392b;
+}
