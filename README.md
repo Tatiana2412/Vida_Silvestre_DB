@@ -40,15 +40,15 @@ un animal pertenece a una especie y a una especie pertenecen muchos animales
 
 ## Tabla: cuidador 👮🏼
 
-lll
+![alt text](image-1.png)
 
 ## Tabla habitat 🌳
 
-ll
+![alt text](image-5.png)
 
-## Tabla especie 🦊
+## Tabla especie 🐨
 
-lll
+![alt text](image-6.png)
 
 ## Instrucciones para manejar el sistema 📚
 
