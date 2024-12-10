@@ -23,3 +23,4 @@ BEGIN
    RETURN assitants_count;
 END;
 $$;
+-- Prueba
