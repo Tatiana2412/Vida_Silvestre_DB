@@ -58,7 +58,7 @@ const DeleteAnimalPage = () => {
 
     return (
         <div className="delete-animal-container">
-            <h1 className="delete-animal-title">Eliminar Animal</h1>
+            <h1 className="delete-animal-title">ELIMINAR ANIMAL</h1>
             <form className="delete-animal-form">
                 <div className="delete-animal-form-group">
                     <input
@@ -107,14 +107,6 @@ const DeleteAnimalPage = () => {
                         disabled={!searchBy.habitat}
                     />
                 </div>
-
-                <button
-                    type="button"
-                    className="delete-animal-search-button"
-                    onClick={handleSearch}
-                >
-                    Buscar
-                </button>
             </form>
 
             <div className="delete-animal-results-container">
@@ -129,11 +121,19 @@ const DeleteAnimalPage = () => {
                     >
                         <span>{animal.name}</span>
                         <span>{animal.id}</span>
+                        <span>{animal.habitat}</span>
                     </div>
                 ))}
             </div>
 
             <div className="delete-animal-button-container">
+                <button
+                    type="button"
+                    className="delete-animal-search-button"
+                    onClick={handleSearch}
+                >
+                    Buscar
+                </button>
                 <button
                     type="button"
                     className="delete-animal-delete-button"
@@ -146,7 +146,7 @@ const DeleteAnimalPage = () => {
                     className="delete-animal-back-button"
                     onClick={() => navigate('/')}
                 >
-                    Atrás
+                    Volver
                 </button>
             </div>
         </div>

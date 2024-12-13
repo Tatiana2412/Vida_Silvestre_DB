@@ -19,9 +19,6 @@
 }
 body {
   /*background-color: #457dea; /* Fondo azul */
-  background-image: url(./components/Zoo.jfif);
-  background-size: cover; /* Hace que la imagen cubra todo el fondo */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
   
   margin: 0;
   padding: 0;

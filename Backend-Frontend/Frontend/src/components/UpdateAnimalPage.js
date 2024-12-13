@@ -55,7 +55,7 @@ const UpdateAnimalPage = () => {
 
     return (
         <div className="update-animal-container">
-            <h1 className="update-animal-title">Actualizar Animal</h1>
+            <h1 className="update-animal-title">ACTUALIZAR ANIMAL</h1>
             <form className="update-animal-form">
                 {/* Casilla de selección para ID */}
                 <div className="update-animal-form-group">

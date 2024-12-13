@@ -1,111 +1,99 @@
 .delete-animal-container {
     width: 50%;
-    min-height: calc(100vh - 60px); /* Altura completa menos un margen opcional */
+    min-height: calc(100vh - 60px);
     margin: auto;
     padding: 30px;
-    background-color: #e6f7ff; /* Fondo suave */
-    border-radius: 10px;
+    background-image: url('Container.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrar verticalmente */
+    justify-content: center;
+    border: 2px solid #000000;
 }
 
 .delete-animal-title {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #2b3d4f; /* Color del título */
+    color: #5654d4; /* Color del título */
     font-family: 'Georgia', serif;
+    text-shadow:
+    1px 1px 0px #000,   
+    -1px -1px 0px #000, 
+    1px -1px 0px #000,  
+    -1px 1px 0px #000;  
 }
 
 .delete-animal-form {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espaciado entre filas */
+    gap: 20px;
 }
 
 .delete-animal-form-group {
     display: flex;
-    align-items: center; /* Centra verticalmente cada fila */
-    justify-content: space-between; /* Espacia las etiquetas y los inputs */
-    width: 100%; /* Asegura que la fila ocupe todo el contenedor */
-}
-
-.delete-animal-form-group label {
-    width: 50%; /* Ajusta el ancho de las etiquetas */
-    text-align: left;
-    font-weight: bold;
-    font-size: 1rem;
-    color: #34495e; /* Color del texto */
-}
-
-.delete-animal-form-group input[type="text"] {
-    flex-grow: 2;
-    padding: 8px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f7f7f7; /* Fondo por defecto */
-}
-
-.delete-animal-form-group input[type="text"]:disabled {
-    background-color: #e6e6e6; /* Fondo deshabilitado */
-    cursor: not-allowed;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .delete-animal-form-group input[type="checkbox"] {
-    width: 10%;
-    cursor: pointer;
+    margin-right: 10px; /* Ajusta el espacio entre la checkbox y el texto */
 }
 
-.delete-animal-results-container {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-top: 1px solid #ccc;
-    padding-top: 20px;
-}
-
-.delete-animal-results-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #f7f7f7;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-}
-
-.delete-animal-results-item span {
-    font-size: 1rem;
+.delete-animal-form-group label {
+    flex-grow: 1;
+    text-align: left;
     font-weight: bold;
-    color: #2b3d4f;
+    font-size: 1rem;
+    color: #ffffff;
+    text-shadow:
+    1px 1px 0px #000,   
+    -1px -1px 0px #000, 
+    1px -1px 0px #000,  
+    -1px 1px 0px #000;  
+}
+
+.delete-animal-form-group input[type="text"] {
+    width: 40%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #000000;
+    border-radius: 4px;
 }
 
 .delete-animal-button-container {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
+    width: 100%;
     margin-top: 20px;
 }
 
 .delete-animal-search-button,
 .delete-animal-delete-button,
 .delete-animal-back-button {
-    padding: 10px 20px;
+    padding: 10px;
     font-size: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 48%; /* Asegura que los botones tengan el mismo ancho */
+    flex: 1; /* Permite que los botones tengan el mismo ancho */
     text-align: center;
 }
 
 .delete-animal-search-button {
     background-color: #3498db;
     color: white;
+    border: 1px solid #000000;
+    text-shadow:
+    1px 1px 0px #000,   /* Sombra superior izquierda */
+    -1px -1px 0px #000, /* Sombra inferior derecha */
+    1px -1px 0px #000,  /* Sombra superior derecha */
+    -1px 1px 0px #000;  /* Sombra inferior izquierda */
 }
 
 .delete-animal-search-button:hover {
@@ -113,17 +101,29 @@
 }
 
 .delete-animal-delete-button {
-    background-color: #27ae60; /* Verde de "Actualizar" */
+    background-color: #e74c3c; 
     color: white;
+    border: 1px solid #000000;
+    text-shadow:
+    1px 1px 0px #000,   /* Sombra superior izquierda */
+    -1px -1px 0px #000, /* Sombra inferior derecha */
+    1px -1px 0px #000,  /* Sombra superior derecha */
+    -1px 1px 0px #000;  /* Sombra inferior izquierda */
 }
 
 .delete-animal-delete-button:hover {
-    background-color: #1e8449;
+    background-color: #c0392b;
 }
 
 .delete-animal-back-button {
-    background-color: #e74c3c; /* Rojo */
+    background-color: #e74c3c; 
     color: white;
+    border: 1px solid #000000;
+    text-shadow:
+    1px 1px 0px #000,   /* Sombra superior izquierda */
+    -1px -1px 0px #000, /* Sombra inferior derecha */
+    1px -1px 0px #000,  /* Sombra superior derecha */
+    -1px 1px 0px #000;  /* Sombra inferior izquierda */
 }
 
 .delete-animal-back-button:hover {

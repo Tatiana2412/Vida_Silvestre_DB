@@ -3,20 +3,27 @@
     min-height: calc(100vh - 60px);
     margin: auto;
     padding: 30px;
-    background-color: #e6f7ff;
-    border-radius: 10px;
+    background-image: url('Container.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border: 2px solid #000000;
 }
 
 .read-title {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #2b3d4f;
+    color: #5654d4;
     font-family: 'Georgia', serif;
+    text-shadow:
+    1px 1px 0px #000,   
+    -1px -1px 0px #000, 
+    1px -1px 0px #000,  
+    -1px 1px 0px #000;  
 }
 
 .read-form {
@@ -28,16 +35,28 @@
 .form-group {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 10px; /* Espacio entre el checkbox y los demás elementos */
     width: 100%;
 }
+
+.form-group input[type="checkbox"] {
+    margin: 0; /* Asegura que no haya márgenes adicionales */
+    order: -1; /* Mueve el checkbox al inicio */
+}
+
 
 .form-group label {
     width: 50%;
     text-align: left;
     font-weight: bold;
     font-size: 1rem;
-    color: #34495e;
+    color: #ffffff;
+    text-shadow:
+    1px 1px 0px #000,   
+    -1px -1px 0px #000, 
+    1px -1px 0px #000,  
+    -1px 1px 0px #000;  
 }
 
 .form-group input[type="text"],
@@ -45,20 +64,9 @@
     flex-grow: 2;
     padding: 8px;
     font-size: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     border-radius: 5px;
     background-color: #f7f7f7;
-}
-
-.form-group input[type="text"]:disabled,
-.form-group input[type="date"]:disabled {
-    background-color: #e6e6e6;
-    cursor: not-allowed;
-}
-
-.form-group input[type="checkbox"] {
-    width: 10%;
-    cursor: pointer;
 }
 
 .read-buttons {
@@ -76,22 +84,35 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 48%; /* Ajuste el ancho para coincidir con los botones de Delete */
+    width: 48%;
     text-align: center;
 }
 
 .read-search-button {
     background-color: #3498db;
     color: white;
+    text-shadow:
+    1px 1px 0px #000,   
+    -1px -1px 0px #000, 
+    1px -1px 0px #000,  
+    -1px 1px 0px #000;  
+    border: 1px solid #000000;
 }
 
 .read-search-button:hover {
     background-color: #2980b9;
+    
 }
 
 .read-back-button {
     background-color: #e74c3c;
     color: white;
+    text-shadow:
+    1px 1px 0px #000,   
+    -1px -1px 0px #000, 
+    1px -1px 0px #000,  
+    -1px 1px 0px #000;  
+    border: 1px solid #000000;
 }
 
 .read-back-button:hover {

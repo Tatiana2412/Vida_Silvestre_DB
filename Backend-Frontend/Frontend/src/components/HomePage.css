@@ -1,10 +1,34 @@
 
 .home-title {
-    font-size: 3rem; /* Título grande */
+    
+    font-size: 5.5rem; /* Aumenta el tamaño de la fuente */
     margin-bottom: 30px;
-    color: #2c3e50; /* Color de texto */
     text-align: center;
+    margin-top: 0px;
+    
+    color: #ffffff; /* Color del texto */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra de texto para resaltar */
+    font-family: 'Cinzel', serif; /* Fuente estilizada (puedes cambiarla) */
+    /*background-color: white;
+    /*background: linear-gradient(90deg, #2980b9, #8e44ad); /* Degradado en el texto */
+    /*-webkit-background-clip: text; /* Solo colorea el texto con el degradado */
+    /*-webkit-text-fill-color: transparent; /* Hace que el fondo sea transparente */
+    /*letter-spacing: 2px; /* Espaciado entre letras */
+    
 }
+.home-container {
+    background-image: url('Zoo.jfif');
+    background-size: cover; /* Hace que la imagen cubra todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 
 .button-container {
     display: flex; /* Alineación horizontal */
@@ -12,31 +36,51 @@
     justify-content: center; /* Centra los botones horizontalmente */
     gap: 20px; /* Espaciado uniforme entre los botones */
     margin: 2rem;
+    margin-top: 40px;
+    
+    
 }
 
 .action-button {
+    border: 1px solid #000000;
     display: inline-block;
-    margin: 10px 10px; /* Ajusta el margen horizontal entre botones */
+    margin: 5px 10px;
     padding: 15px 30px;
-    font-size: 1.5rem; /* Botones grandes */
+    font-size: 1.5rem;
     color: #000000;
-    background-color: #ffffff; /* Color de fondo de los botones */
+    background-color: white;
+    /*background-size: cover; /* Hace que la imagen cubra todo el fondo */
+    /*background-repeat: no-repeat; /* Evita que la imagen se repita */
     text-decoration: none;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, transform 0.2s;
-    width: 190px; /* Ancho fijo */
-    height: 320px; /* Alto fijo */
+    width: 190px;
+    height: 360px;
     text-align: center;
     display: flex;
+    flex-direction: column; /* Para alinear contenido verticalmente */
     justify-content: center;
     align-items: center;
 }
 
 .action-button:hover {
-    background-color: #2980b9; /* Color de fondo al pasar el mouse */
-    transform: translateY(-2px); /* Eleva el botón */
+    background-color: #7ca4bf;
+    transform: translateY(-2px);
 }
+
 .action-button:active {
-    transform: translateY(2px); /* Baja el botón al hacer clic */
+    transform: translateY(2px);
+}
+
+.action-button .button-initial {
+    font-size: 8rem; /* Tamaño grande para la inicial */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 10px; /* Espaciado con el texto inferior */
+    color: #1670ad; /* Color destacado */
+}
+
+.action-button .button-text {
+    font-size: 1.5rem; /* Tamaño del texto inferior */
+    color: #242424; /* Color del texto */
 }
