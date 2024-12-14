@@ -1,29 +1,24 @@
 .update-animal-container {
-    width: 50%;
-    min-height: calc(100vh - 60px);
-    margin: auto;
-    padding: 30px;
-    background-image: url('Container.jpg'); /* Imagen de fondo */
+    width: 40%;
+    min-height: calc(80vh - 40px);
+    margin: 60px 380px;
+    padding: 20px;
+    background-color: rgba(245, 242, 242, 0.482);
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 2px solid #000000;
 }
 
 .update-animal-title {
     text-align: center;
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #5654d4;
-    font-family: 'Georgia', serif;
-    text-shadow:
-    1px 1px 0px #000,   
-    -1px -1px 0px #000, 
-    1px -1px 0px #000,  
-    -1px 1px 0px #000;  
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #7c5656;
+    font-family: 'Georgia', serif; 
 }
 
 .update-animal-form {
@@ -41,22 +36,16 @@
 }
 
 .update-animal-form-group label {
-    width: 40%;
+    width: 60%;
     text-align: left;
     font-weight: bold;
-    font-size: 1rem;
-    color: #ffffff;
-    text-shadow:
-    1px 1px 0px #000,   /* Sombra superior izquierda */
-    -1px -1px 0px #000, /* Sombra inferior derecha */
-    1px -1px 0px #000,  /* Sombra superior derecha */
-    -1px 1px 0px #000;  /* Sombra inferior izquierda */
-    
+    font-size: 1.3rem;
+    -webkit-text-fill-color: #4a2d2d; /* Color del texto */
 }
 
 .update-animal-form-group input[type="text"],
 .update-animal-form-group input[type="date"] {
-    flex-grow: 2;
+    width: 45%;
     padding: 8px;
     font-size: 1rem;
     border: 1px solid #ccc;
@@ -70,8 +59,8 @@
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #3498db;
+    font-size: 1.1rem;
+    background-color: #5a852f;
     color: white;
     border: none;
     border-radius: 5px;
@@ -80,15 +69,10 @@
     width: 50%;
     text-align: center;
     border: 1px solid #000000;
-    text-shadow:
-    1px 1px 0px #000,   /* Sombra superior izquierda */
-    -1px -1px 0px #000, /* Sombra inferior derecha */
-    1px -1px 0px #000,  /* Sombra superior derecha */
-    -1px 1px 0px #000;  /* Sombra inferior izquierda */
 }
 
 .update-animal-edit-button:hover {
-    background-color: #2980b9;
+    background-color: #5a852f;
 }
 
 .update-animal-button-container {
@@ -101,7 +85,7 @@
 .update-animal-submit-button,
 .update-animal-back-button {
     padding: 8px 16px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -111,32 +95,22 @@
 }
 
 .update-animal-submit-button {
-    background-color: #3498db;
+    background-color: #5a852f;
     color: white;
     border: 1px solid #000000;
-    text-shadow:
-    1px 1px 0px #000,   /* Sombra superior izquierda */
-    -1px -1px 0px #000, /* Sombra inferior derecha */
-    1px -1px 0px #000,  /* Sombra superior derecha */
-    -1px 1px 0px #000;  /* Sombra inferior izquierda */
     
 }
 
 .update-animal-submit-button:hover {
-    background-color: #3498db;
+    background-color: #5a852f;
 }
 
 .update-animal-back-button {
-    background-color: #e74c3c;
+    background-color: #da4131;
     color: white;
     border: 1px solid #000000;
-    text-shadow:
-    1px 1px 0px #000,   /* Sombra superior izquierda */
-    -1px -1px 0px #000, /* Sombra inferior derecha */
-    1px -1px 0px #000,  /* Sombra superior derecha */
-    -1px 1px 0px #000;  /* Sombra inferior izquierda */
 }
 
 .update-animal-back-button:hover {
-    background-color: #c0392b;
+    background-color: #da4131;
 }

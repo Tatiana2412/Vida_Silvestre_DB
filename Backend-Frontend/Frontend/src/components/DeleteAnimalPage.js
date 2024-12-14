@@ -129,10 +129,17 @@ const DeleteAnimalPage = () => {
             <div className="delete-animal-button-container">
                 <button
                     type="button"
+                    className="delete-animal-back-button"
+                    onClick={() => navigate('/')}
+                >
+                    Volver
+                </button>
+                <button
+                    type="button"
                     className="delete-animal-search-button"
                     onClick={handleSearch}
                 >
-                    Buscar
+                    Buscar    
                 </button>
                 <button
                     type="button"
@@ -140,13 +147,6 @@ const DeleteAnimalPage = () => {
                     onClick={handleDelete}
                 >
                     Eliminar
-                </button>
-                <button
-                    type="button"
-                    className="delete-animal-back-button"
-                    onClick={() => navigate('/')}
-                >
-                    Volver
                 </button>
             </div>
         </div>

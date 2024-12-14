@@ -77,17 +77,18 @@ const CreateAnimalPage = () => {
                 <div className="create-animal-button-container">
                     <button 
                         type="button" 
-                        className="create-animal-submit-button" 
-                        onClick={handleCreateAnimal}
-                    >
-                        Crear
-                    </button>
-                    <button 
-                        type="button" 
                         className="create-animal-back-button" 
                         onClick={() => navigate('/')}
                     >
                         Atrás
+                    </button>
+                    <button 
+                        type="button" 
+                        className="create-animal-submit-button" 
+                        onClick={handleCreateAnimal}
+                        
+                    >
+                        Crear
                     </button>
                 </div>
             </form>

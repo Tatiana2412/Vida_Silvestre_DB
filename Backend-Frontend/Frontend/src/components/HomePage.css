@@ -2,12 +2,13 @@
 .home-title {
     
     font-size: 5.5rem; /* Aumenta el tamaño de la fuente */
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     text-align: center;
-    margin-top: 0px;
-    
-    color: #ffffff; /* Color del texto */
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra de texto para resaltar */
+    margin-top: 30px;
+
+
+    -webkit-text-stroke: 2px #4a2d2d; /* Borde negro de 2px */
+    -webkit-text-fill-color: #d9e4e9; /* Color del texto */
     font-family: 'Cinzel', serif; /* Fuente estilizada (puedes cambiarla) */
     /*background-color: white;
     /*background: linear-gradient(90deg, #2980b9, #8e44ad); /* Degradado en el texto */
@@ -17,7 +18,7 @@
     
 }
 .home-container {
-    background-image: url('Zoo.jfif');
+    background-image: url('zoo3.jpg');
     background-size: cover; /* Hace que la imagen cubra todo el fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
@@ -32,31 +33,32 @@
 
 .button-container {
     display: flex; /* Alineación horizontal */
-    flex-wrap: wrap; /* Asegura que los botones se muevan a la siguiente línea si es necesario */
+   flex-wrap: wrap; /* Asegura que los botones se muevan a la siguiente línea si es necesario */
     justify-content: center; /* Centra los botones horizontalmente */
     gap: 20px; /* Espaciado uniforme entre los botones */
-    margin: 2rem;
-    margin-top: 40px;
-    
+    margin: 4rem;
+    margin-top: 20px;
     
 }
 
 .action-button {
     border: 1px solid #000000;
     display: inline-block;
-    margin: 5px 10px;
+    margin: 3px 10px;
     padding: 15px 30px;
     font-size: 1.5rem;
     color: #000000;
-    background-color: white;
+    
+    background-color: rgba(247, 237, 237, 0.5);
+
     /*background-size: cover; /* Hace que la imagen cubra todo el fondo */
     /*background-repeat: no-repeat; /* Evita que la imagen se repita */
     text-decoration: none;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, transform 0.2s;
-    width: 190px;
-    height: 360px;
+    width: 140px;
+    height: 280px;
     text-align: center;
     display: flex;
     flex-direction: column; /* Para alinear contenido verticalmente */
@@ -65,7 +67,7 @@
 }
 
 .action-button:hover {
-    background-color: #7ca4bf;
+    background-color: rgb(255, 255, 255);
     transform: translateY(-2px);
 }
 
@@ -73,14 +75,22 @@
     transform: translateY(2px);
 }
 
-.action-button .button-initial {
-    font-size: 8rem; /* Tamaño grande para la inicial */
+.action-button .button-image { 
+    width: 140px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto; 
+    margin-bottom: 10px; /* Espaciado con el texto inferior */ 
+
+}
+.action-button .button-image2 { 
+    width: 125px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto; 
+    margin-bottom: 10px; /* Espaciado con el texto inferior */ 
+
+}
+.action-button .button-text {
+    font-size: 2rem; /* Tamaño grande para la inicial */
     font-weight: bold; /* Texto en negrita */
     margin-bottom: 10px; /* Espaciado con el texto inferior */
-    color: #1670ad; /* Color destacado */
+    color: #4a2d2d; /* Color destacado */
 }
-
-.action-button .button-text {
-    font-size: 1.5rem; /* Tamaño del texto inferior */
-    color: #242424; /* Color del texto */
-}
+ 

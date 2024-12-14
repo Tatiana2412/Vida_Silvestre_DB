@@ -174,16 +174,6 @@ const UpdateAnimalPage = () => {
             </form>
 
             <div className="update-animal-button-container">
-                {/* Botón de Actualización */}
-                <button
-                    type="button"
-                    className="update-animal-submit-button"
-                    onClick={handleUpdate}
-                    disabled={!isEditing}
-                >
-                    Actualizar
-                </button>
-
                 {/* Botón de volver a la página principal */}
                 <button
                     type="button"
@@ -191,6 +181,16 @@ const UpdateAnimalPage = () => {
                     onClick={() => navigate('/')}
                 >
                     Atrás
+                </button>
+
+                {/* Botón de Actualización */}
+                <button
+                    type="button"
+                    className="update-animal-submit-button"
+                    onClick={handleUpdate}
+                    disabled={!isEditing}
+                 >
+                    Actualizar
                 </button>
 
                 {/* Botón para reiniciar el formulario */}

@@ -106,11 +106,11 @@ const ReadAnimalPage = () => {
 
             {/* Contenedor de botones */}
             <div className="read-buttons">
-                <button className="read-search-button" onClick={handleSearch}>
-                    Buscar
-                </button>
                 <button className="read-back-button" onClick={() => navigate('/')}>
                     Atrás
+                </button>
+                <button className="read-search-button" onClick={handleSearch}>
+                    Buscar
                 </button>
             </div>
         </div>

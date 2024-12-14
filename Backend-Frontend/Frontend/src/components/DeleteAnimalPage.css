@@ -1,29 +1,24 @@
 .delete-animal-container {
-    width: 50%;
-    min-height: calc(100vh - 60px);
-    margin: auto;
-    padding: 30px;
-    background-image: url('Container.jpg'); /* Imagen de fondo */
+    width: 40%;
+    min-height: calc(80vh - 40px);
+    margin: 60px 380px;
+    padding: 20px;
+    background-color: rgba(245, 242, 242, 0.482);
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 2px solid #000000;
 }
 
 .delete-animal-title {
     text-align: center;
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #5654d4; /* Color del título */
-    font-family: 'Georgia', serif;
-    text-shadow:
-    1px 1px 0px #000,   
-    -1px -1px 0px #000, 
-    1px -1px 0px #000,  
-    -1px 1px 0px #000;  
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: #7c5656; /* Color del título */
+    font-family: 'Georgia', serif; 
 }
 
 .delete-animal-form {
@@ -47,13 +42,8 @@
     flex-grow: 1;
     text-align: left;
     font-weight: bold;
-    font-size: 1rem;
-    color: #ffffff;
-    text-shadow:
-    1px 1px 0px #000,   
-    -1px -1px 0px #000, 
-    1px -1px 0px #000,  
-    -1px 1px 0px #000;  
+    font-size: 1.4rem;
+    -webkit-text-fill-color: #4a2d2d; /* Color del texto */
 }
 
 .delete-animal-form-group input[type="text"] {
@@ -69,14 +59,14 @@
     justify-content: space-between;
     gap: 10px;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .delete-animal-search-button,
 .delete-animal-delete-button,
 .delete-animal-back-button {
     padding: 10px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -86,46 +76,33 @@
 }
 
 .delete-animal-search-button {
-    background-color: #3498db;
+    background-color: #5a852f;
     color: white;
     border: 1px solid #000000;
-    text-shadow:
-    1px 1px 0px #000,   /* Sombra superior izquierda */
-    -1px -1px 0px #000, /* Sombra inferior derecha */
-    1px -1px 0px #000,  /* Sombra superior derecha */
-    -1px 1px 0px #000;  /* Sombra inferior izquierda */
+
 }
 
 .delete-animal-search-button:hover {
-    background-color: #2980b9;
+    background-color: #5a852f;
 }
 
 .delete-animal-delete-button {
-    background-color: #e74c3c; 
+    background-color: #da4131; 
     color: white;
     border: 1px solid #000000;
-    text-shadow:
-    1px 1px 0px #000,   /* Sombra superior izquierda */
-    -1px -1px 0px #000, /* Sombra inferior derecha */
-    1px -1px 0px #000,  /* Sombra superior derecha */
-    -1px 1px 0px #000;  /* Sombra inferior izquierda */
+
 }
 
 .delete-animal-delete-button:hover {
-    background-color: #c0392b;
+    background-color: #da4131;
 }
 
 .delete-animal-back-button {
-    background-color: #e74c3c; 
+    background-color: #da4131; 
     color: white;
     border: 1px solid #000000;
-    text-shadow:
-    1px 1px 0px #000,   /* Sombra superior izquierda */
-    -1px -1px 0px #000, /* Sombra inferior derecha */
-    1px -1px 0px #000,  /* Sombra superior derecha */
-    -1px 1px 0px #000;  /* Sombra inferior izquierda */
 }
 
 .delete-animal-back-button:hover {
-    background-color: #c0392b;
+    background-color: #da4131;
 }
