@@ -10,7 +10,7 @@ const UpdateAnimalPage = () => {
         species: '',
         birthDate: '',
         caretaker: '',
-        habitat: ''
+        habitat: '',
     });
     const [selectedField, setSelectedField] = useState(''); // Controla cuál campo está habilitado para edición
     const [isEditing, setIsEditing] = useState(false); // Determina si estamos en modo de edición
@@ -18,12 +18,45 @@ const UpdateAnimalPage = () => {
     const navigate = useNavigate();
 
     // Función para permitir la edición del animal
-    const handleEdit = () => {
-        if (!animalId && !animalName) {
-            alert('Ingrese el ID o el nombre del animal para editar.');
+    const handleEdit = async () => {
+        let url = '';
+
+        if (selectedField === 'id' && animalId) {
+            url = `http://127.0.0.1:8000/obtener_animal/${animalId}`;
+        } else if (selectedField === 'name' && animalName) {
+            url = `http://127.0.0.1:8000/buscar_por_nombre/${animalName}`;
+        } else {
+            alert('Por favor ingresa el ID o el Nombre del animal para editar.');
             return;
         }
-        setIsEditing(true); // Habilitamos la edición
+
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                alert('No se encontró el animal.');
+                return;
+            }
+
+            const data = await response.json();
+
+            // Si se busca por nombre y se reciben múltiples resultados, tomar el primero
+            const animal = Array.isArray(data) ? data[0] : data;
+
+            // Ajustar los nombres de los campos recibidos del backend
+            setAnimalData({
+                name: animal.nombre || '',
+                species: animal.especie || '',
+                birthDate: animal.fechanac || '',
+                caretaker: animal.cuidador || '',
+                habitat: animal.habitat || '',
+            });
+
+            setAnimalId(animal.id || animalId); // Guarda el ID en caso de buscar por nombre
+            setIsEditing(true); // Activa el modo de edición
+        } catch (error) {
+            console.error('Error al obtener el animal:', error);
+            alert('Ocurrió un error al buscar el animal.');
+        }
     };
 
     // Función para manejar el cambio de los campos de datos
@@ -33,9 +66,32 @@ const UpdateAnimalPage = () => {
     };
 
     // Función para manejar el update de los datos
-    const handleUpdate = () => {
-        console.log('Datos actualizados:', animalData);
-        alert('Animal actualizado correctamente');
+    const handleUpdate = async () => {
+        const url = `http://127.0.0.1:8000/Actualizar_animal/${animalId}`;
+        try {
+            const response = await fetch(url, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    nombre: animalData.name,
+                    idespecie: animalData.species,
+                    fechanac: animalData.birthDate,
+                    idcuidador: animalData.caretaker,
+                    idhabitat: animalData.habitat,
+                }),
+            });
+
+            if (!response.ok) {
+                alert('Error al actualizar el animal.');
+                return;
+            }
+
+            alert('Animal actualizado correctamente.');
+            handleReset();
+        } catch (error) {
+            console.error('Error al actualizar el animal:', error);
+            alert('Ocurrió un error al actualizar el animal.');
+        }
     };
 
     // Función para reiniciar los campos después de actualizar un animal
@@ -47,7 +103,7 @@ const UpdateAnimalPage = () => {
             species: '',
             birthDate: '',
             caretaker: '',
-            habitat: ''
+            habitat: '',
         });
         setIsEditing(false);
         setSelectedField(''); // Reinicia el campo seleccionado
@@ -65,7 +121,7 @@ const UpdateAnimalPage = () => {
                         checked={selectedField === 'id'}
                         onChange={() => {
                             setSelectedField('id');
-                            setAnimalName(''); // Deshabilitar nombre
+                            setAnimalName('');
                         }}
                         disabled={isEditing}
                     />
@@ -75,7 +131,7 @@ const UpdateAnimalPage = () => {
                         id="animalId"
                         value={animalId}
                         onChange={(e) => setAnimalId(e.target.value)}
-                        disabled={selectedField !== 'id'} // Deshabilita si no está seleccionado
+                        disabled={selectedField !== 'id'}
                     />
                 </div>
 
@@ -87,7 +143,7 @@ const UpdateAnimalPage = () => {
                         checked={selectedField === 'name'}
                         onChange={() => {
                             setSelectedField('name');
-                            setAnimalId(''); // Deshabilitar ID
+                            setAnimalId('');
                         }}
                         disabled={isEditing}
                     />
@@ -97,7 +153,7 @@ const UpdateAnimalPage = () => {
                         id="animalName"
                         value={animalName}
                         onChange={(e) => setAnimalName(e.target.value)}
-                        disabled={selectedField !== 'name'} // Deshabilita si no está seleccionado
+                        disabled={selectedField !== 'name'}
                     />
                 </div>
 
@@ -174,7 +230,6 @@ const UpdateAnimalPage = () => {
             </form>
 
             <div className="update-animal-button-container">
-                {/* Botón de volver a la página principal */}
                 <button
                     type="button"
                     className="update-animal-back-button"
@@ -182,18 +237,16 @@ const UpdateAnimalPage = () => {
                 >
                     Atrás
                 </button>
-
-                {/* Botón de Actualización */}
                 <button
                     type="button"
                     className="update-animal-submit-button"
                     onClick={handleUpdate}
                     disabled={!isEditing}
-                 >
+                >
                     Actualizar
                 </button>
 
-                {/* Botón para reiniciar el formulario */}
+
                 <button
                     type="button"
                     className="update-animal-submit-button"
@@ -207,4 +260,3 @@ const UpdateAnimalPage = () => {
 };
 
 export default UpdateAnimalPage;
-    

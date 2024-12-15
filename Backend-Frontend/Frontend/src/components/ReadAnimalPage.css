@@ -31,22 +31,21 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px; /* Espacio entre el checkbox y los demás elementos */
+    gap: 10px;
     width: 100%;
 }
 
 .form-group input[type="checkbox"] {
-    margin: 0; /* Asegura que no haya márgenes adicionales */
-    order: -1; /* Mueve el checkbox al inicio */
+    margin: 0;
+    order: -1;
 }
-
 
 .form-group label {
     width: 50%;
     text-align: left;
     font-weight: bold;
     font-size: 1.3rem;
-    -webkit-text-fill-color: #4a2d2d; /* Color del texto */
+    -webkit-text-fill-color: #4a2d2d;
 }
 
 .form-group input[type="text"],
@@ -67,7 +66,8 @@
 }
 
 .read-search-button,
-.read-back-button {
+.read-back-button,
+.read-view-all-button {
     padding: 10px 20px;
     font-size: 1.1rem;
     border: none;
@@ -81,18 +81,108 @@
 .read-search-button {
     background-color: #5a852f;
     color: white;
+    border: 1px solid #000000;
 }
 
 .read-search-button:hover {
     background-color: #5a852f;
-    
 }
 
 .read-back-button {
     background-color: #da4131;
     color: white;
+    border: 1px solid #000000;
 }
 
 .read-back-button:hover {
     background-color: #da4131;
 }
+
+.read-view-all-button {
+    background-color: #3498db;
+    color: white;
+    border: 1px solid #000000;
+}
+
+.read-view-all-button:hover {
+    background-color: #2980b9;
+}
+
+.table-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 1000;
+    width: 80%;
+}
+
+.table-popup table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-popup th, .table-popup td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.table-popup th {
+    background-color: #f2f2f2;
+}
+
+/* Contenedor que engloba el botón "Cerrar" y los botones de paginación */
+.pagination-container {
+    display: flex;
+    justify-content: flex-start; /* Alinea los botones hacia la derecha */
+    align-items: center;       /* Alinea todos los botones verticalmente */
+    gap: 10px;                 /* Espacio entre los botones */
+    margin-top: 20px;          /* Distancia desde el contenido de la tabla */
+}
+
+/* Estilo para los botones de paginación */
+.pagination button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #5a852f;
+    color: white;
+}
+
+.pagination button:hover {
+    background-color: #3a551f;
+}
+
+.pagination button:disabled {
+    background-color: #5a852f;
+    color: white;
+    cursor: not-allowed;
+}
+
+/* Estilo para el botón de Cerrar en el popup */
+.table-popup button.close-popup {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #da4131;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.table-popup button.close-popup:hover {
+    background-color: #c0392b;
+}
+
