@@ -53,3 +53,10 @@ un animal pertenece a una especie y a una especie pertenecen muchos animales
 ## Instrucciones para manejar el sistema 📚
 
 En los siguientes links encontraras el manual de usuario y el manual tecnico de la apliacion donde encontraras toda la informacion necesaria para manejar de forma adecuada nuestra apliacion esperamos sea de su agrado. 😃
+ 
+## manual de usuario
+Vida_Silvestre_DB\Manuales\Manual de Usuario.pdf
+
+## manual tecnico
+Vida_Silvestre_DB\Manuales\Manual Tecnico.pdf
+
